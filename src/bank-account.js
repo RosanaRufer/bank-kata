@@ -8,8 +8,12 @@ class Account {
     statementsCount(){
         return this.statements;
     }
+
     makeDeposit(){
         this.statements++;
+    }
+    withdraw(){
+
     }
 };
 

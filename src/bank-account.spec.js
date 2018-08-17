@@ -21,6 +21,11 @@ describe('BankAccount', () => {
             expect(result).toBe(1);
         });
 
+        it('Should increment statements by 1 after withdrawal', () => {
+            account.withdraw(100);
+            const result = account.statementsCount();
+            expect(result).toBe(1);
+        });
     });
 
 });
