@@ -26,6 +26,14 @@ describe('BankAccount', () => {
             const result = account.statementsCount();
             expect(result).toBe(1);
         });
+
+    });
+
+    it('Should reflect last statement\'s amount', () => {
+        const account = new Account();
+        account.makeDeposit(50);
+        const lastStatement = account.getLastStatement();
+        expect(lastStatement.amount).toBe(50)
     });
 
 });
