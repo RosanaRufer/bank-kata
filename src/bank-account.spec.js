@@ -36,4 +36,12 @@ describe('BankAccount', () => {
         expect(lastStatement.amount).toBe(50)
     });
 
+    it('Should reflect last statement\'s date', () => {
+        const account = new Account();
+        const date = new Date('3-3-2018');
+        account.makeDeposit(date, 50);
+        const lastStatement = account.getLastStatement();
+        expect(lastStatement.date).toBe(date)
+    });
+
 });
