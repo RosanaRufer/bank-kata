@@ -1,19 +1,32 @@
 
+class Statement {
+
+    constructor(amount) {
+        this.amount = amount;
+    }
+}
+
 class Account {
 
+
     constructor() {
-        this.statements = 0;
+        this.statements = [];
     }
 
     statementsCount(){
-        return this.statements;
+        return this.statements.length;
     }
 
-    makeDeposit(){
-        this.statements++;
+    makeDeposit(amount){
+        this.statements.push(new Statement(amount));
     }
-    withdraw(){
-        this.statements++;
+
+    withdraw(amount){
+        this.statements.push(new Statement(-Math.abs(amount)));
+    }
+
+    getLastStatement() {
+        return this.statements[this.statements.length -1];
     }
 };
 
