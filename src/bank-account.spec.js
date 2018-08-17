@@ -1,3 +1,5 @@
+const { Account } = require("./bank-account");
+
 describe('BankAccount', () => {
 
     describe('Statement printing', () => {
