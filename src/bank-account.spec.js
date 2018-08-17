@@ -16,5 +16,4 @@ describe('BankAccount', () => {
         expect(result).toBe(1);
     });
 
-
 });
